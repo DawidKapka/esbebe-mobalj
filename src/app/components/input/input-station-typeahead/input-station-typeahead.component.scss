@@ -1,0 +1,26 @@
+@import 'src/assets/scss/colors';
+
+.station-input {
+  font-family: Arial, sans-serif;
+
+  .input {
+    height: 32px;
+    width: 98%;
+    font-size: 16px;
+  }
+
+  .typeahead {
+    border: 1px solid $color-black;
+    border-top: none;
+    z-index: 99;
+
+    &__suggestion {
+      padding: 6px;
+
+      &:hover {
+        background-color: rgba(183, 183, 183, 0.25);
+      }
+    }
+
+  }
+}

@@ -1,0 +1,6 @@
+<div class="station-input">
+    <input type="text" class="input" [(ngModel)]="searchQuery" (input)="findSuggestions()">
+    <div class="typeahead">
+        <div class="typeahead__suggestion" *ngFor="let suggestion of suggestions">{{suggestion}}</div>
+    </div>
+</div>
