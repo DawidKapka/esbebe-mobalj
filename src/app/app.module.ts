@@ -16,6 +16,7 @@ import {FormsModule} from "@angular/forms";
 import { InputDatetimeComponent } from './components/input/input-datetime/input-datetime.component';
 import { ConnectionComponent } from './components/connection/connection.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { DepartureComponent } from './components/departure/departure.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     SearchFormDeparturesComponent,
     InputStationTypeaheadComponent,
     InputDatetimeComponent,
-    ConnectionComponent
+    ConnectionComponent,
+    DepartureComponent
   ],
   imports: [
     BrowserModule,

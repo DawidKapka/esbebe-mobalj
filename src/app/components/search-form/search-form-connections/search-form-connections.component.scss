@@ -69,8 +69,22 @@
     }
   }
 
+  .input-date {
+    display: inherit;
+    margin-left: 50%;
+    transform: translateX(calc(-50% - 8px));
+    border-right: 1px solid black;
+  }
+
+  .input-time {
+    display: inherit;
+    margin-left: 50%;
+    transform: translateX(calc(-50% - 8px));
+    border-right: 1px solid black;
+  }
+
   .search-button__wrapper {
-    margin-top: 138px
+    margin-top: 32px
   }
 
   .switch-button {

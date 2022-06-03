@@ -12,6 +12,7 @@ export class InputStationTypeaheadComponent implements OnInit {
   public suggestions: string[] = [];
   public typeaheadOpen: boolean = false;
 
+  @Input() placeholder: string = '';
   @Input('value') public value: string = '';
   @Output('valueChange') private valueChange: EventEmitter<string> = new EventEmitter<string>();
 

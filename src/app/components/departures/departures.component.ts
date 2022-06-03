@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Stationboard} from "../../models/stationboard-root.model";
 
 @Component({
   selector: 'app-departures',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./departures.component.scss']
 })
 export class DeparturesComponent implements OnInit {
+  stationboard: Stationboard;
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    this.http.get('http://transport.opendata.ch/v1/stationboard?station=Luzern').forEach(res => {
+      this.stationboard = res as Stationboard;
+    })
+  }
 
   ngOnInit(): void {
   }

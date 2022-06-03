@@ -1,5 +1,5 @@
 <div class="station-input">
-    <input type="text" class="input" [(ngModel)]="value" (input)="findSuggestions()" (blur)="closeTypeahead()">
+    <input type="text" class="input" [(ngModel)]="value" (input)="findSuggestions()" (blur)="closeTypeahead()" [placeholder]="placeholder">
     <div class="typeahead" *ngIf="typeaheadOpen">
         <div class="typeahead__suggestion" *ngFor="let suggestion of suggestions" (click)="copySuggestion($event)">{{suggestion}}</div>
     </div>
