@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Stationboard} from "../../models/stationboard-root.model";
+import {Stationboard} from "../../models/stationboard.model";
 
 @Component({
   selector: 'app-departures',

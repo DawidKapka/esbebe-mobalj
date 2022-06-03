@@ -1,6 +1,6 @@
 <div class="wrapper">
     <app-search-form type="departures" class="connections-search"></app-search-form>
 </div>
-<div class="departures">
-    <app-departure *ngFor="let departure of stationboard.stationboard" [connection]="departure"></app-departure>
+<div class="departures" *ngIf="stationboard">
+    <app-departure *ngFor="let connection of stationboard.stationboard" [connection]="connection"></app-departure>
 </div>

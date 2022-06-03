@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Connection} from "../../models/connection.model";
+import {Stop} from "../../models/stop.model";
 
 @Component({
   selector: 'app-departure',
@@ -8,7 +9,7 @@ import {Connection} from "../../models/connection.model";
 })
 export class DepartureComponent implements OnInit {
 
-  @Input() connection: Connection;
+  @Input() connection: Stop;
   constructor() { }
 
   ngOnInit(): void {

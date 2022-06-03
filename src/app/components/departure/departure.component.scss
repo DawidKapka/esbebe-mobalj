@@ -1,0 +1,66 @@
+@import 'src/assets/scss/colors';
+
+.connection {
+  width: calc(100% - 32px);
+  border: 1px solid $color-black;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  height: 80px;
+  margin: 0 16px 16px 16px;
+  display: flex;
+  font-family: Arial, sans-serif;
+
+  &:hover {
+    transform: scale(1.0025);
+  }
+
+  .journey {
+    width: 55%;
+    height: 100%;
+    display: flex;
+
+    .stop {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 16px;
+      margin-top: 30px;
+
+      p {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+
+  .from-infos, .to-infos, .connection-info {
+    height: 100%;
+    width: 15%;
+  }
+
+  .from-infos {
+    border-right: 1px solid $color-black;
+  }
+
+  .to-infos {
+    border-left: 1px solid $color-black;
+  }
+
+  .infos {
+    margin: 12px 0 0 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .products {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .infos {
+    margin: 4px 0 0 50%;
+  }
+}
