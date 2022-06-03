@@ -15,6 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { InputDatetimeComponent } from './components/input/input-datetime/input-datetime.component';
 import { ConnectionComponent } from './components/connection/connection.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ConnectionComponent } from './components/connection/connection.componen
     HttpClientModule,
     FormsModule
   ],
-  providers: [StationsService],
+  providers: [StationsService, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
