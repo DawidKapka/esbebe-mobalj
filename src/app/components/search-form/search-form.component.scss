@@ -1,0 +1,34 @@
+@import 'src/assets/scss/colors';
+
+.switcher {
+  height: 20px;
+  width: 320px;
+  border: 1px solid $color-black;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 2px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 16px;
+
+  &__option {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: $color-black;
+    background-color: $color-white;
+    width: 50%;
+
+    > p {
+      padding-top: 2px;
+      height: 100%;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &__chosen {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+

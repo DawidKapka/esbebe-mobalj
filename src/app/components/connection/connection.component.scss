@@ -1,0 +1,42 @@
+@import 'src/assets/scss/colors';
+
+.connection {
+  width: calc(100% - 32px);
+  border: 1px solid $color-black;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  height: 160px;
+  margin: 0 16px 16px 16px;
+  display: flex;
+  font-family: Arial, sans-serif;
+
+  &:hover {
+    transform: scale(1.0025);
+  }
+
+  .journey {
+    width: 55%;
+    height: 100%;
+
+    .arrow {
+      width: 100%;
+      height: 50%;
+      border-bottom: 1px solid $color-black;
+    }
+  }
+
+  .from-infos, .to-infos, .connection-info {
+    height: 100%;
+    width: 15%;
+  }
+
+  .infos {
+    margin: 32px 0 0 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .products {
+    font-weight: bold;
+  }
+}

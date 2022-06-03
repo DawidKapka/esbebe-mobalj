@@ -1,0 +1,31 @@
+@import 'src/assets/scss/colors';
+
+.header {
+  width: 102vw;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color-red;
+  box-shadow: 2px 2px 4px $color-gray;
+
+  &__title {
+    top: 0;
+    left: 0;
+    width: 25%;
+    font-family: "Roboto Thin", serif;
+    color: $color-white;
+    padding-left: 32px;
+    margin-top: 60px;
+    transform: translateY(-50%);
+
+    &__main {
+      font-size: 36px;
+    }
+
+    &__addition {
+      font-size: 18px;
+      padding-left: 6px;
+    }
+  }
+}

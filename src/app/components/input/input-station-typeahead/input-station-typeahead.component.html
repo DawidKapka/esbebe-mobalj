@@ -1,6 +1,6 @@
 <div class="station-input">
-    <input type="text" class="input" [(ngModel)]="searchQuery" (input)="findSuggestions()">
-    <div class="typeahead">
-        <div class="typeahead__suggestion" *ngFor="let suggestion of suggestions">{{suggestion}}</div>
+    <input type="text" class="input" [(ngModel)]="value" (input)="findSuggestions()" (blur)="closeTypeahead()">
+    <div class="typeahead" *ngIf="typeaheadOpen">
+        <div class="typeahead__suggestion" *ngFor="let suggestion of suggestions" (click)="copySuggestion($event)">{{suggestion}}</div>
     </div>
 </div>

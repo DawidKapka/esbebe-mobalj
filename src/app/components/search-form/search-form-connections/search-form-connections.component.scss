@@ -1,0 +1,81 @@
+@import "src/assets/scss/colors";
+
+.connections-form {
+  width: 598px;
+
+  &__stations {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__datetime {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.switch-button {
+  background-color: white;
+  border-radius: 4px;
+  height: 38px;
+  width: 64px;
+}
+
+.input-date, .input-time {
+  height: 38px;
+  width: 250px;
+  margin-left: 2px;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.input-date {
+  margin-right: 82px;
+}
+
+.departure-input {
+  margin-right: 8px;
+}
+
+.arrival-input {
+  margin-left: 8px;
+}
+
+.search-button {
+  width: 128px;
+  height: 38px;
+  background-color: $color-red;
+  border-radius: 4px;
+  color: $color-white;
+  border-color: $color-red;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .connections-form {
+    &__stations {
+      display: initial;
+    }
+
+    &__datetime {
+      display: initial;
+    }
+  }
+
+  .search-button__wrapper {
+    margin-top: 138px
+  }
+
+  .switch-button {
+    margin: 16px 0 16px 50%;
+    transform: translateX(-50%);
+  }
+}
+

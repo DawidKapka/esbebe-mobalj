@@ -2,10 +2,11 @@
 
 .station-input {
   font-family: Arial, sans-serif;
+  width: 256px;
 
   .input {
     height: 32px;
-    width: 98%;
+    width: 248px;
     font-size: 16px;
   }
 
@@ -22,5 +23,12 @@
       }
     }
 
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .station-input {
+    margin: 0 0 0 50%;
+    transform: translateX(calc(-50% - 6px) );
   }
 }

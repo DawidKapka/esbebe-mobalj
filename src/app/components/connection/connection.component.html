@@ -1,0 +1,24 @@
+<div class="connection">
+    <div class="from-infos">
+        <div class="infos">
+            <p>{{connection.from.station.name}}</p>
+            <p>{{formatTime(connection.from.departure)}}</p>
+            <p>{{formatPlatform(connection.from.platform)}}</p>
+        </div>
+    </div>
+    <div class="journey">
+        <div class="arrow"></div>
+    </div>
+    <div class="to-infos">
+        <div class="infos">
+            <p>{{connection.to.station.name}}</p>
+            <p>{{formatTime(connection.to.arrival)}}</p>
+            <p>{{formatPlatform(connection.to.platform)}}</p>
+        </div>
+    </div>
+    <div class="connection-info">
+        <div class="infos products">
+            <p *ngFor="let product of connection.products">{{product}}</p>
+        </div>
+    </div>
+</div>
