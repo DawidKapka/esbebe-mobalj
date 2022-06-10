@@ -5,10 +5,10 @@
         <app-input-station-typeahead [(value)]="arrivalStationValue" class="arrival-input" placeholder="Arrival"></app-input-station-typeahead>
     </div>
     <div class="connetions-form__datetime">
-        <input type="date" class="input-date">
-        <input type="time" class="input-time">
+        <input type="date" class="input-date" [(ngModel)]="connectionDate">
+        <input type="time" class="input-time" [(ngModel)]="connectionTime">
     </div>
     <div class="search-button__wrapper">
-        <button class="search-button">Search</button>
+        <button class="search-button" (click)="searchConnections()">Search</button>
     </div>
 </div>

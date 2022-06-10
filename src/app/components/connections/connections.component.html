@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <app-search-form type="connections" class="connections-search"></app-search-form>
+    <app-search-form type="connections" class="connections-search" (connection-search)="setConnections($event)"></app-search-form>
 </div>
 <div class="connections">
     <app-connection *ngFor="let connection of connections" [connection]="connection"></app-connection>
