@@ -2,7 +2,7 @@
 
 ## Reflection
 
-This is not our first project using Angular. We've done multiple projects including Angular in the past and frequently use it.
+This is not our first project using Angular. We've done multiple projects including Angular in the past and still frequently use it.
 
 Angular is a Framework that uses the MVVM-Pattern.
 
@@ -16,4 +16,4 @@ Dawid:
   - Worked with it for 1 year
   - Other Projects
 
-Project we have worked on together: https://github.com/noah495/UeK307
+A project we have worked on together for a course: https://github.com/noah495/UeK307
