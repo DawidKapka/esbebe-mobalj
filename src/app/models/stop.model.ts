@@ -1,15 +1,13 @@
-import {Connection} from "./connection.model";
+import {Station} from "./station.model";
 
 export interface Stop {
-    capacity1st: number,
-    capacity2nd: number,
-    category: string,
-    categoryName: string,
-    name: string,
-    number: string,
-    operator: string,
-    passList: Connection[],
-    stop: Connection,
-    subcategory: string,
-    to: string
+    arrival: string;
+    arrivalTimestamp: string;
+    delay: string;
+    departure: string;
+    departureTimestamp: string;
+    location: Location;
+    platform: string;
+    realtimeAvailability: string;
+    station: Station;
 }

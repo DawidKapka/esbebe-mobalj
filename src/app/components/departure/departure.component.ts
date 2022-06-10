@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Connection} from "../../models/connection.model";
-import {Stop} from "../../models/stop.model";
+import {Departure} from "../../models/departure.model";
+import {FormatService} from "../../services/static/format.service";
 
 @Component({
   selector: 'app-departure',
@@ -8,11 +9,25 @@ import {Stop} from "../../models/stop.model";
   styleUrls: ['./departure.component.scss']
 })
 export class DepartureComponent implements OnInit {
-
-  @Input() connection: Stop;
+  public isExpanded: boolean = false;
+  @Input() connection: Departure;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.connection);
   }
 
+
+
+  toggleExpanded() {
+    this.isExpanded = !this.isExpanded;
+  }
+
+  formatTime(time: string): string {
+    return FormatService.formatTime(time);
+  }
+
+  formatPlatform(platform: string): string {
+    return FormatService.formatPlatform(platform);
+  }
 }

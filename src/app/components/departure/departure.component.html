@@ -1,31 +1,31 @@
-<div class="connection">
-    <div class="from-infos">
-        <div class="infos">
-            <p>Luzern</p>
-            <p>17:30</p>
-            <p>Pl. 4</p>
+<div class="connection" [ngClass]="{'is-expanded': isExpanded}">
+    <div class="connection__infos" (click)="toggleExpanded()">
+        <div class="from-infos">
+            <div class="infos">
+                <p>{{connection.stop.station.name}}</p>
+                <p>{{formatTime(connection.stop.departure)}}</p>
+                <p>{{formatPlatform(connection.stop.platform)}}</p>
+            </div>
         </div>
+        <div class="journey">
+            <div class="arrow"></div>
+        </div>
+        <div class="to-infos">
+            <div class="infos">
+                <p>{{connection.to}}</p>
+            </div>
+        </div>
+        <div class="connection-info">
+            <div class="infos products">
+                <p>{{connection.category + ' ' + connection.number}}</p>
+            </div>
+        </div>
+        <!--
+        <div class="stop" *ngFor="let stop of connection.passList">
+            <p class="stop__name">{{stop.station.name}}</p>
+            <p>,</p>
+        </div>
+        -->
     </div>
-    <div class="journey">
-        <div class="stop">
-            <p class="stop__name">Sursee</p>
-            <p>-></p>
-        </div>
-        <div class="stop">
-            <p class="stop__name">Zofingen</p>
-            <p>-></p>
-        </div>
-    </div>
-    <div class="to-infos">
-        <div class="infos">
-            <p>Olten</p>
-            <p>17:56</p>
-            <p>Pl. 8</p>
-        </div>
-    </div>
-    <div class="connection-info">
-        <div class="infos products">
-            <p>RE 17</p>
-        </div>
-    </div>
+    <app-departure-expanded *ngIf="isExpanded" [departure]="connection"></app-departure-expanded>
 </div>

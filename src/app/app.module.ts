@@ -17,6 +17,9 @@ import { InputDatetimeComponent } from './components/input/input-datetime/input-
 import { ConnectionComponent } from './components/connection/connection.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { DepartureComponent } from './components/departure/departure.component';
+import {ConnectionsService} from "./services/connections.service";
+import {DeparturesService} from "./services/departures.service";
+import { DepartureExpandedComponent } from './components/departure-expanded/departure-expanded.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { DepartureComponent } from './components/departure/departure.component';
     InputStationTypeaheadComponent,
     InputDatetimeComponent,
     ConnectionComponent,
-    DepartureComponent
+    DepartureComponent,
+    DepartureExpandedComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ import { DepartureComponent } from './components/departure/departure.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [StationsService, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
+  providers: [StationsService, {provide: LocationStrategy, useClass: HashLocationStrategy}, ConnectionsService, DeparturesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Connection} from "../../models/connection.model";
+import {FormatService} from "../../services/static/format.service";
 
 @Component({
   selector: 'app-connection',
@@ -15,15 +16,10 @@ export class ConnectionComponent implements OnInit {
   }
 
   formatTime(time: string): string {
-    return time.substring(11, 16)
+    return FormatService.formatTime(time)
   }
 
   formatPlatform(platform: string): string {
-    if (!platform) return '';
-    if (!isNaN(Number(platform[0]))) {
-      return `Pl. ${platform}`
-    } else {
-      return `Kante ${platform}`;
-    }
+    return FormatService.formatPlatform(platform);
   }
 }

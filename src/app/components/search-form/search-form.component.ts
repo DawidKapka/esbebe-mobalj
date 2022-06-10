@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router} from "@angular/router";
 import {Connection} from "../../models/connection.model";
+import {Stationboard} from "../../models/stationboard.model";
 
 @Component({
   selector: 'app-search-form',
@@ -11,6 +12,7 @@ export class SearchFormComponent implements OnInit {
 
   @Input('type') public formType: 'connections' | 'departures' = null;
   @Output('connection-search') connectionSearch: EventEmitter<Connection[]> = new EventEmitter<Connection[]>();
+  @Output('departure-search') departureSearch: EventEmitter<Stationboard> = new EventEmitter<Stationboard>();
   tab: 'connections' | 'departures' = 'connections';
 
   constructor(private router: Router) { }
@@ -26,5 +28,9 @@ export class SearchFormComponent implements OnInit {
 
   emitConnections(connections: Connection[]) {
     this.connectionSearch.emit(connections);
+  }
+
+  emitDepartures(departures: Stationboard) {
+    this.departureSearch.emit(departures);
   }
 }

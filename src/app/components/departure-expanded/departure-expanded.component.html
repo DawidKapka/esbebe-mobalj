@@ -1,0 +1,23 @@
+<div class="connection__expanded">
+    <div *ngFor="let stop of departure.passList; let i = index" class="stop">
+        <div class="stop__container">
+            <div class="arrow">
+                <div class="dot" *ngIf="i !== departure.passList.length -1 && i !== 0 && stop.departure"></div>
+                <div class="line" *ngIf="i === 0 || i === departure.passList.length - 1" [ngClass]="{'top': i === 0, 'bottom': i === departure.passList.length - 1}"></div>
+            </div>
+            <p class="stop__time" [ngClass]="{'first': i === 0, 'last': i === departure.passList.length - 1}">{{formatTime(stop.departure ? stop.departure : '')}}</p>
+            <p class="stop__name"
+               [ngClass]="{
+               'italic': !stop.departure && i !== departure.passList.length - 1,
+               'first': i === 0,
+               'last': i === departure.passList.length - 1,
+               'bold': i === 0 || i === departure.passList.length - 1
+               }">{{i === 0 ? departure.stop.station.name : stop.station.name}}</p>
+            <p class="stop__delay" *ngIf="stop.departure || i === departure.passList.length - 1" [ngClass]="{
+               'first': i === 0,
+               'last': i === departure.passList.length - 1}">
+                {{formatDelay(i !== departure.passList.length - 1 ? stop.delay : departure.stop.delay)}}
+            </p>
+        </div>
+    </div>
+</div>

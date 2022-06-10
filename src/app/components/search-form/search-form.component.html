@@ -4,5 +4,5 @@
         <div class="switcher__option" [ngClass]="{'switcher__chosen': tab === 'departures'}" (click)="navigateTo('departures')"><p>Departures</p></div>
     </div>
     <app-search-form-connections *ngIf="formType === 'connections'" (connection-search)="emitConnections($event)"></app-search-form-connections>
-    <app-search-form-departures *ngIf="formType === 'departures'"></app-search-form-departures>
+    <app-search-form-departures *ngIf="formType === 'departures'" (departure-search)="emitDepartures($event)"></app-search-form-departures>
 </div>

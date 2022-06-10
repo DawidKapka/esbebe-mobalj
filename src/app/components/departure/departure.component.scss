@@ -1,14 +1,17 @@
 @import 'src/assets/scss/colors';
 
 .connection {
-  width: calc(100% - 32px);
+  width: calc(100% - 64px);
   border: 1px solid $color-black;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   height: 80px;
-  margin: 0 16px 16px 16px;
-  display: flex;
+  margin: 0 0 16px 40px;
   font-family: Arial, sans-serif;
+
+  &__infos {
+    display: flex;
+  }
 
   &:hover {
     transform: scale(1.0025);
@@ -19,29 +22,16 @@
     height: 100%;
     display: flex;
 
-    .stop {
-      display: flex;
-      justify-content: space-between;
-      margin-left: 16px;
-      margin-top: 30px;
-
-      p {
-        margin: 0 8px 0 0;
-      }
+    .arrow {
+      width: 100%;
+      height: 40px;
+      border-bottom: 1px solid $color-black;
     }
   }
 
   .from-infos, .to-infos, .connection-info {
     height: 100%;
     width: 15%;
-  }
-
-  .from-infos {
-    border-right: 1px solid $color-black;
-  }
-
-  .to-infos {
-    border-left: 1px solid $color-black;
   }
 
   .infos {
@@ -58,6 +48,11 @@
     font-weight: bold;
   }
 }
+
+.is-expanded {
+  height: auto;
+}
+
 
 @media screen and (max-width: 640px) {
   .infos {

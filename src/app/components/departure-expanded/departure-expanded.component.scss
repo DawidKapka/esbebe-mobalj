@@ -1,0 +1,77 @@
+@import 'src/assets/scss/colors';
+
+.connection__expanded {
+  margin: 20px 0 20px 64px;
+
+  .stop {
+    display: flex;
+    margin-left: 32px;
+
+    &__delay {
+      color: $color-red;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+
+    &__time {
+      margin: 20px 8px 20px 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    &__name {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .first {
+      margin-top: -8px;
+    }
+
+    .last {
+      margin-bottom: -8px;
+    }
+
+    &__container {
+      display: flex;
+    }
+
+    .arrow {
+      border-left: 1px solid $color-black;
+      width: 32px;
+      margin-left: 16px;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background-color: $color-black;
+        border-radius: 50%;
+        margin-top: 26px;
+        margin-left: -3px;
+      }
+
+      .line {
+        width: 6px;
+        height: 6px;
+        border-bottom: 1px solid $color-black;
+      }
+
+      .top {
+        margin: -6px 0 0 -3px;
+      }
+
+      .bottom {
+        margin: 26px 0 0 -3px;
+      }
+    }
+
+    .italic {
+      font-style: italic;
+      margin: 40px 0 40px 0;
+    }
+  }
+}
