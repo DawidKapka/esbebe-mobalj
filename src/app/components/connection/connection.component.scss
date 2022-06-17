@@ -1,14 +1,21 @@
 @import 'src/assets/scss/colors';
 
+.expanded {
+  height: auto !important;
+}
+
 .connection {
-  width: calc(100% - 64px);
+  width: calc(100% - 128px);
   border: 1px solid $color-black;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   height: 160px;
   margin: 0 0 16px 40px;
-  display: flex;
   font-family: Arial, sans-serif;
+
+  &__wrapper {
+    display: flex;
+  }
 
   &:hover {
     transform: scale(1.0025);
@@ -16,7 +23,7 @@
 
   .journey {
     width: 55%;
-    height: 100%;
+    height: 160px;
 
     .arrow {
       width: 100%;

@@ -9,6 +9,7 @@ import {FormatService} from "../../services/static/format.service";
 })
 export class ConnectionComponent implements OnInit {
   @Input() connection: Connection;
+  public isExpanded: boolean = false;
 
   constructor() { }
 
@@ -22,4 +23,8 @@ export class ConnectionComponent implements OnInit {
   formatPlatform(platform: string): string {
     return FormatService.formatPlatform(platform);
   }
+
+    toggleExpanded() {
+        this.isExpanded = !this.isExpanded;
+    }
 }
