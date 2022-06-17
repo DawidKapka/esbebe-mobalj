@@ -20,6 +20,9 @@ import { DepartureComponent } from './components/departure/departure.component';
 import {ConnectionsService} from "./services/connections.service";
 import {DeparturesService} from "./services/departures.service";
 import { DepartureExpandedComponent } from './components/departure-expanded/departure-expanded.component';
+import { ConnectionExpandedComponent } from './components/connection-expanded/connection-expanded.component';
+import { MapComponent } from './components/map/map.component';
+import { GoogleMapsModule } from "@angular/google-maps";
 
 @NgModule({
   declarations: [
@@ -34,13 +37,16 @@ import { DepartureExpandedComponent } from './components/departure-expanded/depa
     InputDatetimeComponent,
     ConnectionComponent,
     DepartureComponent,
-    DepartureExpandedComponent
+    DepartureExpandedComponent,
+    ConnectionExpandedComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    GoogleMapsModule
   ],
   providers: [StationsService, {provide: LocationStrategy, useClass: HashLocationStrategy}, ConnectionsService, DeparturesService ],
   bootstrap: [AppComponent]

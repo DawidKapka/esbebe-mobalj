@@ -1,5 +1,6 @@
 import {Station} from "./station.model";
 import {Checkpoint} from "./checkpoint.model";
+import {Section} from "./section.model";
 
 export interface Connection {
     from: Checkpoint,
@@ -9,4 +10,5 @@ export interface Connection {
     products: string[],
     capacity1st: number,
     capacity2nd: number,
+    sections: Section[]
 }
