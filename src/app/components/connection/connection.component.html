@@ -1,5 +1,5 @@
-<div class="connection" (click)="toggleExpanded()" [ngClass]="{'expanded': isExpanded}">
-    <div class="connection__wrapper">
+<div class="connection" [ngClass]="{'expanded': isExpanded}">
+    <div class="connection__wrapper" (click)="toggleExpanded()">
         <div class="from-infos">
             <div class="infos">
                 <p>{{connection.from.station.name}}</p>

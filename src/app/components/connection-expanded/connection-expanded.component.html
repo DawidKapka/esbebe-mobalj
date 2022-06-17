@@ -2,11 +2,14 @@
     <div class="section" *ngFor="let section of connection.sections">
         <div *ngIf="!section.walk">
             <div class="section__from">
+                <div class="from-map" *ngIf="showDepartureMap">
+                    <app-map [coordinate]="section.departure.station.coordinate" (hide)="showDepartureMap = false"></app-map>
+                </div>
                 <div class="wrapper">
                     <p class="time">{{formatTime(section.departure.departure)}}
                         <span class="delay">{{formatDelay(section.departure.delay)}}</span>
                     </p>
-                    <p class="name">{{section.departure.station.name}}</p>
+                    <p class="name">{{section.departure.station.name}} <button class="map-button" (click)="showMap('departure')">Show on map</button></p>
                     <p class="platform">{{formatPlatform(section.departure.platform)}}</p>
                 </div>
             </div>
@@ -21,10 +24,16 @@
                     <p class="time">{{formatTime(section.arrival.arrival)}}
                         <span class="delay">{{formatDelay(section.arrival.delay)}}</span>
                     </p>
-                    <p class="name">{{section.arrival.station.name}}</p>
+                    <p class="name">{{section.arrival.station.name}} <button class="map-button" (click)="showMap('arrival')">Show on map</button></p>
                     <p class="platform">{{formatPlatform(section.arrival.platform)}}</p>
                 </div>
             </div>
+            <div class="to-map" *ngIf="showArrivalMap">
+                <app-map [coordinate]="section.arrival.station.coordinate" (hide)="showArrivalMap = false"></app-map>
+            </div>
         </div>
+    </div>
+    <div class="share">
+        <button class="share-button" (click)="shareConnection()">Share</button>
     </div>
 </div>

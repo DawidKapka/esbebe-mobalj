@@ -45,10 +45,27 @@
       }
     }
   }
+
+  .share {
+    margin: 16px 0 16px 128px;
+
+    .share-button {
+      padding: 8px;
+    }
+  }
+}
+
+.map-button {
+  margin-left: 16px;
 }
 
 @media screen and (max-width: 640px) {
   .section {
-    width: calc(100% - 36px);
+    width: calc(100% - 32px);
+    margin-left: 16px;
+  }
+
+  .share {
+    margin-left: 16px;
   }
 }
