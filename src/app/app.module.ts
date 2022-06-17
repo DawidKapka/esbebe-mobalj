@@ -23,6 +23,7 @@ import { DepartureExpandedComponent } from './components/departure-expanded/depa
 import { ConnectionExpandedComponent } from './components/connection-expanded/connection-expanded.component';
 import { MapComponent } from './components/map/map.component';
 import { GoogleMapsModule } from "@angular/google-maps";
+import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { GoogleMapsModule } from "@angular/google-maps";
     DepartureComponent,
     DepartureExpandedComponent,
     ConnectionExpandedComponent,
-    MapComponent
+    MapComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule,

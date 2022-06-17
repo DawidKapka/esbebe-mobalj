@@ -1,0 +1,34 @@
+<div class="section">
+    <div *ngIf="!section.walk">
+        <div class="section__from">
+            <div class="from-map" *ngIf="showDepartureMap">
+                <app-map [station]="section.departure.station" (hide)="showDepartureMap = false"></app-map>
+            </div>
+            <div class="wrapper">
+                <p class="time">{{formatTime(section.departure.departure)}}
+                    <span class="delay">{{formatDelay(section.departure.delay)}}</span>
+                </p>
+                <p class="name">{{section.departure.station.name}} <button class="map-button" (click)="showMap('departure')">Show on map</button></p>
+                <p class="platform">{{formatPlatform(section.departure.platform)}}</p>
+            </div>
+        </div>
+        <div class="section__journey">
+            <div class="infos">
+                <p class="info">{{section.journey.category}}</p>
+                <p class="info">{{section.journey.number}}</p>
+            </div>
+        </div>
+        <div class="section__to">
+            <div class="wrapper">
+                <p class="time">{{formatTime(section.arrival.arrival)}}
+                    <span class="delay">{{formatDelay(section.arrival.delay)}}</span>
+                </p>
+                <p class="name">{{section.arrival.station.name}} <button class="map-button" (click)="showMap('arrival')">Show on map</button></p>
+                <p class="platform">{{formatPlatform(section.arrival.platform)}}</p>
+            </div>
+        </div>
+        <div class="to-map" *ngIf="showArrivalMap">
+            <app-map [station]="section.arrival.station" (hide)="showArrivalMap = false"></app-map>
+        </div>
+    </div>
+</div>

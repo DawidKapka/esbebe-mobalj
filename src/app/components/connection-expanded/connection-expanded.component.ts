@@ -9,8 +9,6 @@ import {FormatService} from "../../services/static/format.service";
 })
 export class ConnectionExpandedComponent implements OnInit {
   @Input() connection: Connection;
-  showDepartureMap: boolean = false;
-  showArrivalMap: boolean = false;
 
   constructor() { }
 
@@ -23,10 +21,6 @@ export class ConnectionExpandedComponent implements OnInit {
 
   public formatPlatform(platform: string) {
     return FormatService.formatPlatform(platform);
-  }
-
-  public formatDelay(delay: string) {
-    return FormatService.formatDelay(delay);
   }
 
   public shareConnection() {
@@ -53,11 +47,5 @@ export class ConnectionExpandedComponent implements OnInit {
     return body;
   }
 
-  showMap(station: 'arrival' | 'departure') {
-    if (station === 'arrival') {
-      this.showArrivalMap = true;
-    } else {
-      this.showDepartureMap = true;
-    }
-  }
+
 }

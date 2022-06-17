@@ -1,9 +1,13 @@
 <div class="map">
     <div class="map-content">
-        <google-map></google-map>
+        <google-map id="map" height="300px" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+            <map-marker
+                    [position]="center"
+                    [label]="station.name"
+                    [title]="station.name"
+            >
+            </map-marker>
+        </google-map>
     </div>
     <button (click)="emitHide()">X</button>
 </div>
-
-{{coordinate.x}}
-{{coordinate.y}}

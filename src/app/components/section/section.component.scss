@@ -1,0 +1,51 @@
+@import 'src/assets/scss/colors';
+
+.section {
+  margin-left: 128px;
+  width: calc(100% - 256px);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+
+  &__journey {
+    height: 120px;
+    margin-left: 20px;
+    border-left: 1px solid $color-black;
+
+    .infos {
+      margin-left: 10%;
+      font-style: italic;
+      display: flex;
+    }
+  }
+
+  &__from, &__to {
+
+    .wrapper {
+      display: flex;
+
+      .time {
+        font-weight: bold;
+        width: 10%;
+
+        .delay {
+          color: $color-red;
+          font-weight: normal;
+        }
+      }
+
+      .name {
+        width: 70%;
+      }
+
+      .platform {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+  }
+}

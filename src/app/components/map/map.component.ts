@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Coordinate} from "../../models/coordinate.model";
+import {Station} from "../../models/station.model";
+import * as mapStyles from './mapStyles.json'
 
 @Component({
   selector: 'app-map',
@@ -7,8 +8,11 @@ import {Coordinate} from "../../models/coordinate.model";
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  @Input() coordinate: Coordinate;
+  @Input() station: Station;
   @Output() hide: EventEmitter<void> = new EventEmitter<void>();
+  public center: google.maps.LatLngLiteral;
+  public zoom: number = 17;
+  options: google.maps.MapOptions;
 
   constructor() { }
 
@@ -21,6 +25,13 @@ export class MapComponent implements OnInit {
   }
 
   private initMap() {
-
+    this.options = {
+      disableDefaultUI: true,
+      styles: mapStyles
+    }
+    this.center = {
+      lat: this.station.coordinate.x,
+      lng: this.station.coordinate.y
+    }
   }
 }
