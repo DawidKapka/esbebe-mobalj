@@ -7,7 +7,6 @@ describe('SectionComponent', () => {
   let fixture: ComponentFixture<SectionComponent>;
 
   beforeEach(async () => {
-    console.log(2);
   });
 
   it('should create', () => {
