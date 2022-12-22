@@ -20,7 +20,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
       - uses: actions/setup-node@v3
-      - run: git clone git@github.com:DawidKapka/esbebe-mobalj.git
+      - run: git clone https://github.com/DawidKapka/esbebe-mobalj.git
       - run: git pull
       - run: npm ci
       - run: npm run build --if-present
