@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: /home/dawid/esbebe-mobajl/deployment.sh
+          script: /home/root/esbebe/deployment.sh
       - uses: actions/setup-node@v3
 
 
