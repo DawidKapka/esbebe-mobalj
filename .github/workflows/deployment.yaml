@@ -19,10 +19,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: /home/dawid/esbebe-mobajl/deployment.sh
       - uses: actions/setup-node@v3
-      - run: git clone https://github.com/DawidKapka/esbebe-mobalj.git
-      - run: git pull
-      - run: npm ci
-      - run: npm run build --if-present
 
 
